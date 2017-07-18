@@ -25,9 +25,9 @@ var carDealer = {
                     console.log("We have " + this.cars[i].totalNum + " " + car + "(s) availible, Rental price is $" + this.cars[i].rentalPrice);
                 }
                 else {
-                    console.log("Sorry we do not have that model availible");
+                    console.log("Sorry we do not have " + car + "(s) availible");
                 }
-            }    
+            }
         }
     },
     updateInv: function (car, amount) {
