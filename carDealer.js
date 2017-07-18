@@ -35,7 +35,7 @@ var carDealer = {
             if (this.cars[i].type === car) {
                 this.cars[i].totalNum += amount;
                 
-                if (this.cars[i].totalNum !== 0) {
+                if (this.cars[i].totalNum > 0) {
                     this.cars[i].availible = true;
                 }
                 else {
@@ -43,7 +43,7 @@ var carDealer = {
                 }
             }
         }
-        console.log("Updated");
+        console.log("Updated " + car + " +" + amount);
         carDealer.displayCars();
     }
 };
@@ -53,3 +53,4 @@ carDealer.rentalRequest("sedan");
 carDealer.rentalRequest("suv");
 carDealer.rentalRequest("sports");
 carDealer.updateInv("sports", 1);
+carDealer.rentalRequest("sports");
