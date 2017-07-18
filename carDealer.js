@@ -55,6 +55,8 @@ var carDealer = {
             availible: true,
             totalNum: totalNum
         });
+        console.log("Added " + model);
+        carDealer.displayCars();
     }
 };
 
@@ -65,4 +67,4 @@ carDealer.rentalRequest("sports");
 carDealer.updateInv("sports", 1);
 carDealer.rentalRequest("sports");
 carDealer.addInv("hybrid", 200, 20);
-carDealer.displayCars();
+
