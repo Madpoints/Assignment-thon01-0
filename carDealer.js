@@ -47,6 +47,14 @@ var carDealer = {
         }
         console.log("Updated " + car + " +" + amount);
         carDealer.displayCars();
+    },
+    addInv: function (model, price, totalNum) {
+        this.cars.push({
+            type: model,
+            rentalPrice: price,
+            availible: true,
+            totalNum: totalNum
+        });
     }
 };
 
@@ -56,3 +64,5 @@ carDealer.rentalRequest("suv");
 carDealer.rentalRequest("sports");
 carDealer.updateInv("sports", 1);
 carDealer.rentalRequest("sports");
+carDealer.addInv("hybrid", 200, 20);
+carDealer.displayCars();
