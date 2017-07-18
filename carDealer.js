@@ -34,8 +34,10 @@ var carDealer = {
         for (var i = 0; i < this.cars.length; i++) {
             if (this.cars[i].type === car) {
                 this.cars[i].totalNum += amount;
-                
-                if (this.cars[i].totalNum > 0) {
+                if (this.cars[i].totalNum < 0) {
+                    this.cars[i].totalNum = 0;    
+                }
+                else if (this.cars[i].totalNum > 0) {
                     this.cars[i].availible = true;
                 }
                 else {
